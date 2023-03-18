@@ -1,0 +1,18 @@
+@mixin fondoPantalla () {
+    background-color: #2b2d42;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@mixin header ($colores, $tamanio, $fondo) {
+    color: $colores;
+    font-size: $tamanio;
+    background-color: $fondo
+}
+
+body {
+    @include fondoPantalla()
+}
+
+.header {
+    @include header(#edf2f4, 20px, #d90429)
+}
