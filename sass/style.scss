@@ -1,18 +1,128 @@
-@mixin fondoPantalla () {
-    background-color: #2b2d42;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-@mixin header ($colores, $tamanio, $fondo) {
-    color: $colores;
-    font-size: $tamanio;
-    background-color: $fondo
+$colores: ( "oscuro" :#2b2d42, "claro" :#edf2f4, "primario" :#8d99ae, "secundario":#ef233c, "terciario" :#d90429);
+$fuentes: ( "normal" :Verdana, "titulo" :Arial);
+@mixin globales ( $colo-bg, $fuente, $aling-text) {
+    background-color: $colo-bg;
+    font-family: $fuente;
+    text-align: $aling-text;
 }
 
 body {
-    @include fondoPantalla()
+    @include globales(map-get($colores, oscuro), map-get($fuentes, normal), center);
+    color: map-get($colores, claro);
 }
 
-.header {
-    @include header(#edf2f4, 20px, #d90429)
+@mixin titulos ( $color-t, $fuente, $aling) {
+    color: $color-t;
+    font-family: $fuente;
+    text-align: $aling;
+}
+
+.titulo-fnt {
+    @include titulos(map-get($colores, claro), map-get($fuentes, titulo), center)
+}
+
+.titulo-fnt span {
+    font-size: small;
+}
+
+.nav-bg {
+    background-color: map-get($colores, secundario);
+}
+
+@mixin nav-principal ($dis, $direccion, $aling) {
+    display: $dis;
+    flex-direction: $direccion;
+    align-items: $aling;
+    @media screen and (min-width: 480px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal {
+    @include nav-principal(flex, column, center)
+}
+
+@mixin navegacion-enlace($displ, $aling, $color-t, $decoration, $size, $weight-t, $padd, $widt, $radius) {
+    display: $displ;
+    text-align: $aling;
+    color: $color-t;
+    text-decoration: $decoration;
+    font-size: $size;
+    font-weight: $weight-t;
+    padding: $padd;
+    width: $widt;
+    border-radius: $radius;
+}
+
+.navegacion-principal a {
+    @include navegacion-enlace(block, center, map-get($colores, claro), none, 20px, 700, 10px, 100%, 20px)
+}
+
+.navegacion-principal a:hover {
+    color: map-get($colores, primario);
+    transition: .5s;
+}
+
+.hero {
+    background-image: url(/img/hero_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px;
+    position: relative;
+    margin-bottom: 20px;
+    color: map-get($colores, claro)
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgb(0 0 0 / 25%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos {
+    background-color: rgba(0, 0, 0, 0.50);
+    border-radius: 20px;
+}
+
+.boton {
+    text-decoration: none;
+    color: map-get($colores, claro);
+    background-color: map-get($colores, secundario);
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 20px;
+    overflow: hidden;
+    transition: .5;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background: map-get($colores, terciario);
+    box-shadow: 0 0 10px map-get($colores, terciario), 0 0 30px map-get($colores, terciario), 0 0 50px map-get($colores, terciario), 0 0 70px map-get($colores, terciario);
+    transition: .2s;
+}
+
+// Servicios
+@mixin servicio ($dis, $flexDir, $item-aling) {
+    display: $dis;
+    flex-direction: $flexDir;
+    align-items: $item-aling;
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+    }
+}
+
+.servicios {
+    @include servicio(flex, column, center)
 }

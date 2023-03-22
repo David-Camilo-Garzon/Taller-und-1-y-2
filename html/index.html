@@ -12,28 +12,85 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <h1 class="header_h1">
-            Lorem ipsum dolor sit amet.
+    <header>
+        <h1 class="titulo-fnt">
+            Antes de salir de casa <span>deberias saber...</span>
         </h1>
     </header>
 
     <!-- Nav -->
-    <nav class="nav contenedor">
-        <div>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
             <a href="#">Menu Principal</a>
             <a href="#">Contenido</a>
-            <a href="#">Contacto</a>
+            <a href="#">Contactar</a>
+        </nav>
+    </div>
+
+    <!-- section-->
+    <section class="hero">
+        <div class="contenido-hero">
+            <h2>Clima, Hora y Ubicación </h2>
+
+            <div class="iconos">
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-storm" width="76" height="76" viewBox="0 0 24 24" stroke-width="1.5" stroke="#8d99ae" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1" />
+                <polyline points="13 14 11 18 14 18 12 22" />
+              </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alarm" width="76" height="76" viewBox="0 0 24 24" stroke-width="1.5" stroke="#8d99ae" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="13" r="7" />
+                <polyline points="12 10 12 13 14 13" />
+                <line x1="7" y1="4" x2="4.25" y2="6" />
+                <line x1="17" y1="4" x2="19.75" y2="6" />
+              </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-gps" width="76" height="76" viewBox="0 0 24 24" stroke-width="1.5" stroke="#8d99ae" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 17l-1 -4l-4 -1l9 -4z" />
+              </svg>
+            </div>
+
+
+            <a class="boton" href="#">
+                 Contactar
+            </a>
         </div>
-    </nav>
+    </section>
 
     <!-- Main -->
-    <main class="main">
+    <main class="contenedor sombra">
+        <h2> ¿Que dato te interesa saber?</h2>
+
+        <div class="servicios">
+
+            <section class="servicio">
+                <h3>Clima</h3>
+                <p>¿Que te espera el dia de hoy?.
+                </p>
+            </section>
+
+            <section class="servicio">
+                <h3>Hora</h3>
+                <p>La hora del mundo.
+                </p>
+            </section>
+
+            <section class="servicio">
+                <h3>Ubicación</h3>
+                <p>Descubre en qué lugar del mapa.
+                </p>
+            </section>
+        </div>
 
     </main>
     <!-- Footer -->
 
-    <footer class="footer">
+    <footer class="copyright">
         <p> Todos los derechos reservados Camilo Garzón 2023</p>
     </footer>
 </body>
