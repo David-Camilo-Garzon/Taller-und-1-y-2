@@ -9,6 +9,10 @@ $fuentes: ( "normal" :Verdana, "titulo" :Arial);
 body {
     @include globales(map-get($colores, oscuro), map-get($fuentes, normal), center);
     color: map-get($colores, claro);
+    width: auto;
+    margin: 0;
+    position: relative;
+    min-height: 97vh;
 }
 
 @mixin titulos ( $color-t, $fuente, $aling) {
@@ -125,4 +129,20 @@ body {
 
 .servicios {
     @include servicio(flex, column, center)
+}
+
+// footer
+@mixin piePagina ($alingText, $colorBg, $sizeText, $colorText, $padd) {
+    text-align: $alingText;
+    background-color: $colorBg;
+    font-size: $sizeText;
+    color: $colorText;
+    padding: $padd;
+    width: 100%
+}
+
+.copyright {
+    @include piePagina(center, map-get($colores, terciario), 15px, map-get($colores, primario), 5px);
+    position: absolute;
+    bottom: 0;
 }

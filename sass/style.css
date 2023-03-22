@@ -3,6 +3,10 @@ body {
   font-family: Verdana;
   text-align: center;
   color: #edf2f4;
+  width: auto;
+  margin: 0;
+  position: relative;
+  min-height: 97vh;
 }
 
 .titulo-fnt {
@@ -107,4 +111,15 @@ body {
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
+}
+
+.copyright {
+  text-align: center;
+  background-color: #d90429;
+  font-size: 15px;
+  color: #8d99ae;
+  padding: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */

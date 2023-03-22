@@ -12,31 +12,74 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <h1 class="header_h1">
-            Lorem ipsum dolor sit amet.
+    <header>
+        <h1 class="titulo-fnt">
+            ¿Preguntas?
         </h1>
     </header>
 
     <!-- Nav -->
-    <nav class="nav contenedor">
-        <div>
-            <a href="#">Menu Principal</a>
-            <a href="#">Contenido</a>
-            <a href="#">Contacto</a>
-        </div>
-    </nav>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="/html/index.html">Menu Principal</a>
+        </nav>
+    </div>
+
 
     <!-- Main -->
-    <main class="main">
+    <main class="contenedor sombra">
+
+        <section>
+            <h2>Contacto</h2>
+
+            <form class="formulario">
+                <fieldset>
+                    <legend>Contactános llenando todos los campos</legend>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label>Nombre</label>
+                            <input class="input-text" type="text " placeholder="Tu Nombre ">
+                        </div>
+
+
+                        <div class="campo">
+                            <label>Teléfono</label>
+                            <input class="input-text" type="tel " placeholder="Tu Telefono ">
+                        </div>
+
+                        <div class="campo">
+                            <label>Correo</label>
+                            <input class="input-text" type="email " placeholder="Tu email ">
+                        </div>
+
+
+                        <div class="campo">
+                            <label>Mensaje</label>
+                            <textarea class="input-text"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-formulario">
+                        <div class="enviar-btn">
+                            <input class="boton w-sm-100" type="submit" value="Enviar ">
+                        </div>
+                        <div class="editar-btn">
+                            <input class="boton w-sm-100" type="submit" value="Editar ">
+                        </div>
+                        <div class="eliminar-btn">
+                            <input class="boton w-sm-100" type="submit" value="Eliminar ">
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </section>
 
     </main>
     <!-- Footer -->
 
-    <footer class="footer">
+    <footer class="copyright">
         <p> Todos los derechos reservados Camilo Garzón 2023</p>
     </footer>
-
 </body>
 
 </html>
