@@ -3,10 +3,16 @@ body {
   font-family: Verdana;
   text-align: center;
   color: #edf2f4;
-  width: auto;
+  width: 100%;
   margin: 0;
   position: relative;
   min-height: 97vh;
+}
+
+.encabezado {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .titulo-fnt {
@@ -111,6 +117,19 @@ body {
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
+}
+
+servicios-caja {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 2%;
 }
 
 .copyright {

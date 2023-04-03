@@ -9,7 +9,7 @@ $fuentes: ( "normal" :Verdana, "titulo" :Arial);
 body {
     @include globales(map-get($colores, oscuro), map-get($fuentes, normal), center);
     color: map-get($colores, claro);
-    width: auto;
+    width: 100%;
     margin: 0;
     position: relative;
     min-height: 97vh;
@@ -19,6 +19,11 @@ body {
     color: $color-t;
     font-family: $fuente;
     text-align: $aling;
+}
+.encabezado{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
 }
 
 .titulo-fnt {
@@ -130,6 +135,25 @@ body {
 .servicios {
     @include servicio(flex, column, center)
 }
+
+servicios-caja{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+// Formuario
+
+@mixin formulario($widthform, $marginform, $paddingform, $borderform ) {
+    max-width: $widthform;
+    margin: $marginform;
+    padding: $paddingform;
+    border-radius: $borderform;
+}
+
+.contenedor{
+    @include formulario(1200px, 0 auto , 20px, 2%)
+}
+
 
 // footer
 @mixin piePagina ($alingText, $colorBg, $sizeText, $colorText, $padd) {
